@@ -9,24 +9,19 @@ int main(){
   ios::sync_with_stdio(false);
   cin.tie(NULL);
 
-  vector <int> arr;
-  int n,k,threshold,count;
-  count = 0;
+  int n,k;
   cin>>n>>k;
-  for(int i = 0; i<n; i++){
-    int a;
-    if(i == k-1){
-      cin>>threshold;
-      arr.push_back(threshold);
-    }
-    else{
-      cin>>a;
-      arr.push_back(a);
-    }
+  vector<int> arr(n);
+
+  for(int i = 0; i < n; i++){
+    cin>>arr[i];
   }
+  int threshold = arr[k-1];
+  int count = 0;
+
   for(int k:arr){
     if(k >= threshold && k > 0){
-      count++;
+      count ++;
     }
   }
   cout<<count<<'\n';
