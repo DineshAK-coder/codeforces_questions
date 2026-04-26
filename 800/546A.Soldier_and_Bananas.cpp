@@ -7,9 +7,10 @@ int main(){
   ios::sync_with_stdio(false);
   cin.tie(NULL);
 
-  int k,n,w,amount = 0;
+  int k,n,w,amount = 0, result;
   cin>>k>>n>>w;
   amount = ((w*(w+1))/2) * k;
-  cout<<amount - n<<endl;
+  result = amount - n;
+  cout<<max(result,0)<<endl;
   return 0;
 }
