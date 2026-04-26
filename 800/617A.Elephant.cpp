@@ -9,13 +9,6 @@ int main(){
 
   int distance;
   cin>>distance;
-  int dividend = 5;
-  int steps = 0;
-  while(distance != 0){
-    steps += distance/ dividend;
-    distance %= dividend;
-    dividend --;
-  }
-  cout<<steps<<'\n';
+  cout<<(distance+4)/5<<'\n'; //through the formula of (n+k-1)/k. we are essentially making the non divisible stuff to reach the next multiple for acheiving the ceil result.
   return 0;
 }
