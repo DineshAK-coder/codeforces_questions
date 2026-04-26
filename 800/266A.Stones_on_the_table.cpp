@@ -7,16 +7,16 @@ int main(){
   ios::sync_with_stdio(false);
   cin.tie(NULL);
 
-  int n;
-  string colors;
-  cin>>n>>colors;
-  int count = 0;
-
-  for(int i = 1; i < n; i++){
-    if(colors[i] == colors[i-1]){
+  int n,count = 0;
+  char previous = ' ',current;
+  cin>>n;
+  while(n--){
+    cin>>current;
+    if(current == previous){
       count++;
     }
+    previous = current;
   }
-  cout<<count<<'\n';
+  cout<<count<<endl;
   return 0;
 }
