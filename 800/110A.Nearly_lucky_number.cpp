@@ -7,7 +7,8 @@ int main(){
   ios::sync_with_stdio(false);
   cin.tie(NULL);
 
-  int num,count = 0;
+  int count = 0;
+  long long num;
   bool status = false;
   cin>>num;
   while(num != 0){
@@ -18,7 +19,7 @@ int main(){
       count++;
     }
   }
-  string result = (status & (count  == 4 | count  == 7 )) ? "YES" : "NO";
+  string result = (status & (count  == 4 | count  == 7   )) ? "YES" : "NO";
   cout<<result<<endl;
   return 0;
 }
