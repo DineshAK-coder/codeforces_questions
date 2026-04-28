@@ -7,28 +7,24 @@ int main(){
   ios::sync_with_stdio(false);
   cin.tie(NULL);
 
-  int n;
-  string problem;
+  int n,count = 0;
+  string problem, result;
   cin>>n>>problem;
-  int a_count = 0, d_count = 0;
-  for(int k: problem){
-    if(k == 'A'){
-      a_count ++;
+  for(char k: problem){
+    if(k == 'D'){
+      count ++;
     }
     else{
-      d_count ++;
+      count--;
     }
   }
-  string result;
-  if(a_count == d_count){
-    result = "Friendship";
+  if(count > 0){
+    cout<<"Danik";
   }
-  else if(a_count > d_count){
-    result = "Anton";
+  else if(count < 0){
+    cout<<"Anton";
   }
   else{
-    result = "Danik";
+    cout<<"Friendship";
   }
-  cout<<result<<endl;
-  return 0;
 }
